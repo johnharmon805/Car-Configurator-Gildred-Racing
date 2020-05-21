@@ -1,0 +1,23 @@
+.col-md-8 {
+    background-color: lightgrey;
+}
+
+.bottom-page {
+    background-color: #333333;
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    bottom: 0px;
+}
+
+#copyright {
+    color: lightgrey;
+    padding-top: 20px;
+    text-align: center;
+    font-size: small;
+}
+
+#logo {
+    height: 50px;
+    width: 200px;
+}
