@@ -1,5 +1,6 @@
 import React from 'react';
 import './Body.css';
+import Gildred from './Assets/GR Logo.png';
 
 class Body extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Body extends React.Component {
         return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <img id="logo" src="../public/Assets"></img>
+        <img id="logo" src={Gildred}></img>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
