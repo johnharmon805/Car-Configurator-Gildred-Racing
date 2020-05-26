@@ -1,9 +1,5 @@
 import React from 'react';
 import './Body.css';
-import Gildred from './Assets/GR Logo.png';
-// these two below are temporary
-import Red from './Assets/red.png';
-import Blue from './Assets/Blue-Cooper.png'
 
 
 class Body extends React.Component {
@@ -23,81 +19,8 @@ class Body extends React.Component {
             rimFour: false,
             rimFour: false
         }
-        this.isRed = this.isRed.bind(this)
-        this.isGreen = this.isGreen.bind(this)
-        this.isBlue = this.isBlue.bind(this)
-        this.isGray = this.isGray.bind(this)
-        this.isYellow = this.isYellow.bind(this)
-        this.isBlack = this.isBlack.bind(this)
-        this.isWhite = this.isWhite.bind(this)
     }
-    isRed() {
-        this.setState({
-            isRed: true,
-            isGreen: false,
-            isBlue: false,
-            isGray: false,
-            isYellow: false,
-            isBlack: false,
-            isWhite: false,
-        })
-    }
-    isGreen() {
-        this.setState({
-            isRed: false,
-            isGreen: true,
-            isBlue: false,
-            isGray: false,
-            isYellow: false,
-            isBlack: false,
-            isWhite: false,
-        })
-    }
-    isBlue() {
-        this.setState({
-            isRed: false,
-            isGreen: false,
-            isBlue: true,
-            isGray: false,
-            isYellow: false,
-            isBlack: false,
-            isWhite: false,
-        })
-    }
-    isGray() {
-        this.setState({
-            isRed: false,
-            isGreen: false,
-            isBlue: false,
-            isGray: true,
-            isYellow: false,
-            isBlack: false,
-            isWhite: false,
-        })
-    }
-    isYellow() {
-        this.setState({
-            isRed: false,
-            isGreen: false,
-            isBlue: false,
-            isGray: false,
-            isYellow: true,
-            isBlack: false,
-            isWhite: false,
-        })
-    }
-    isBlack() {
-        this.setState({
-            isRed: false,
-            isGreen: false,
-            isBlue: false,
-            isGray: false,
-            isYellow: false,
-            isBlack: true,
-            isWhite: false,
-        })
-    }
-    isWhite() {
+    handleSubmit = (buttonState)=>{
         this.setState({
             isRed: false,
             isGreen: false,
@@ -105,14 +28,15 @@ class Body extends React.Component {
             isGray: false,
             isYellow: false,
             isBlack: false,
-            isWhite: true,
+            isWhite: false,
+            [buttonState]:true
         })
     }
     render() {
         return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <img id="logo" src={Gildred}></img>
+        <img id="logo" src="/Assets/GR logo.png"></img>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -138,19 +62,19 @@ class Body extends React.Component {
     <div className="row">
         <div className="col-md-8">
             <div className="col">
-                <img id="car" src={this.state.isRed ? {Red} : null}></img>
+                <img id="car" src={this.state.isRed ? "/Assets/red.png" : this.state.isBlue ? "/Assets/Blue-Cooper.png" : null}></img>
             </div>
         </div>
         <div className="col-md-4">
             <div className="row">Exterior Colors</div>
-            <div className="row">
-                <div className="col"><button id="red" onClick={this.isRed}></button></div>
-                <div className="col"><button id="green" onClick={this.isGreen}></button></div>
-                <div className="col"><button id="blue" onClick={this.isBlue}></button></div>
-                <div className="col"><button id="gray" onClick={this.isGray}></button></div>
-                <div className="col"><button id="yellow" onClick={this.isYellow}></button></div>
-                <div className="col"><button id="black" onClick={this.isBlack}></button></div>
-                <div className="col"><button id="white" onClick={this.isWhite}></button></div>
+            <div className="row scrollWindow">
+                <div className="col"><button id="red" onClick={()=>this.handleSubmit("isRed")}></button></div>
+                <div className="col"><button id="green" onClick={()=>this.handleSubmit("isGreen")}></button></div>
+                <div className="col"><button id="blue" onClick={()=>this.handleSubmit("isBlue")}></button></div>
+                <div className="col"><button id="gray" onClick={()=>this.handleSubmit("isGray")}></button></div>
+                <div className="col"><button id="yellow" onClick={()=>this.handleSubmit("isYellow")}></button></div>
+                <div className="col"><button id="black" onClick={()=>this.handleSubmit("isBlack")}></button></div>
+                <div className="col"><button id="white" onClick={()=>this.handleSubmit("isWhite")}></button></div>
             </div>
         </div>
     </div>
