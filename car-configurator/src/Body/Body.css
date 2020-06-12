@@ -52,7 +52,22 @@
     height: 400px;
     width: 800px;
 }
-#scrollWindow {
-    overflow: auto;
-    white-space: nowrap;
+#rim2img {
+    height: 80px;
+}
+#rim1img {
+    height: 90px;
+} 
+#rim3img {
+    height: 80px;
+} 
+#rim4img {
+    height: 80px;
+} 
+#rim5img {
+    height: 80px;
+} 
+#rimTwo, #rimOne {
+    background-color: transparent;
+    border: none;
 }
