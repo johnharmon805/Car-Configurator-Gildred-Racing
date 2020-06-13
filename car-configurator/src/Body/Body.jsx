@@ -58,9 +58,9 @@ class Body extends React.Component {
             <div className="row">Exterior Colors</div>
             <div className="row">
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isRed")}><img id="red-btn" src="/Assets/red-btn.png"></img></button></div>
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isLightBlue")}><img id="lightblue-btn" src="/Assets/lightblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isBlue")}><img id="blue-btn" src="/Assets/blue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isSkyBlue")}><img id="skyblue-btn" src="/Assets/skyblue-btn.png"></img></button></div>
+                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isLightBlue")}><img id="lightblue-btn" src="/Assets/lightblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isWhite")}><img id="white-btn" src="/Assets/white-btn.png"></img></button></div>
             </div>
             {/* <div className="row">
