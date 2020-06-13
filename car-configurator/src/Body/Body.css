@@ -1,5 +1,6 @@
 .col-md-8 {
     border-right: solid thin;
+    margin-top: 50px;
 }
 
 .bottom-page {
@@ -31,8 +32,8 @@
     border-radius: 100%;
 }
 #car {
-    height: 400px;
-    width: 800px;
+    height: 300px;
+    width: 600px;
 }
 #rim2img {
     height: 80px;
@@ -52,4 +53,24 @@
 #rimTwo, #rimOne {
     background-color: transparent;
     border: none;
+}
+
+#colorstitle {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+#colorselect {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#wheeltitle {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+#wheeloptions {
+    margin-top: 10px;
+    margin-left: 20px;
 }

@@ -12,18 +12,6 @@ function App() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-                <li className="nav-item active">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Features</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Pricing</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -32,7 +20,7 @@ function App() {
 
     <div className="bottom-page">
         <footer>
-            <p id="copyright">Copyright© Gildred Racing | Configurator Developed by John Harmon & Andrew Lee</p>
+            <p id="copyright">Copyright© Gildred Racing | Configurator Developed by <a href= 'https://www.linkedin.com/in/johnharmon805/' >John Harmon</a> & <a href= 'https://www.linkedin.com/in/andrewdavidlee7/' >Andrew Lee</a></p>
         </footer>
     </div>
     </div>
