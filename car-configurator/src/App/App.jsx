@@ -12,7 +12,7 @@ function App() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <button id="navbarbtn">Order Your Custom Super Cooper</button>
+              <button id="navbarbtn">Order Your Super Cooper</button>
             </ul>
         </div>
     </nav>
