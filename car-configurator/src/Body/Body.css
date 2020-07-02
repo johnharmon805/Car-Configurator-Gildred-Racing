@@ -24,12 +24,39 @@
 }
 /* Button colors here: */
 #red-btn, #white-btn, #lightblue-btn, #skyblue-btn, #blue-btn {
-    height: 50px;
+    height: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .color-btns {
     background-color: transparent;
     border: none;
     border-radius: 100%;
+}
+.color-btns:focus {
+    box-shadow: 0 0 5px blue;
+    outline: none;
+}
+.rim-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.rim-btn:focus {
+    box-shadow: 0 0 5px blue;
+    outline: none;
+}
+.rim-btn1 {
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+}
+.rim-btn1:focus {
+    box-shadow: 0 0 5px blue;
+    outline: none;
 }
 #car {
     height: 300px;
@@ -50,11 +77,6 @@
 #rim5img {
     height: 80px;
 } 
-#rimTwo, #rimOne {
-    background-color: transparent;
-    border: none;
-}
-
 #colorstitle {
     margin-top: 50px;
     margin-left: 40px;
