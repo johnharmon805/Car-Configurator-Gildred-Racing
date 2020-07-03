@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import './Body.css';
+import './Exterior.css';
 
 
-class Body extends React.Component {
+class Exterior extends React.Component {
     constructor(props) {
         super(props) 
         this.state = {
@@ -83,4 +83,4 @@ class Body extends React.Component {
     }
 }
 
-export default Body;
+export default Exterior;

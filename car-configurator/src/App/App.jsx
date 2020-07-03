@@ -1,17 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import Body from '../Body/Body';
-import Navbar from "../Components/Navbar/Navbar"
+import Exterior from '../Pages/Exterior/Exterior';
+import Navbar from "../Components/Navbar/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Body />
+      <Router>
+        <Route exact path="/" component={Exterior}/>
+      </Router>
     <div className="bottom-page">
-        <footer>
-            <p id="copyright">Copyright© Gildred Racing | Configurator Developed by <a href= 'https://www.linkedin.com/in/johnharmon805/' >John Harmon</a> & <a href= 'https://www.linkedin.com/in/andrewdavidlee7/' >Andrew Lee</a></p>
-        </footer>
+      <Footer />
     </div>
     </div>
   );
