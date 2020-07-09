@@ -18,7 +18,7 @@ class Exterior extends React.Component {
             rimTwo: false,
             rimThree: false,
             rimFour: false,
-            rimFour: false
+            rimFive: false
         }
     }
     handleSubmit = (buttonState)=>{
