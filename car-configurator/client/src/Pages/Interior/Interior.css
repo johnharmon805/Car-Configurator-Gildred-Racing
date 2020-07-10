@@ -1,0 +1,26 @@
+.overlay{
+    height: "650px"; 
+    width: "1000px"
+}
+.container{
+    position: relative;
+}
+.vidContainer faceVideo{
+    position: relative;
+    z-index: 0;
+    margin-top: 25px;
+}
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    z-index: 1;
+}
+​
+#faceVideo {
+    margin-bottom: 20px;
+}
+​
+#vid-overlay {
+    margin-top: 50px;
+}
