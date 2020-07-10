@@ -4,6 +4,7 @@ import './App.css';
 import Exterior from '../Pages/Exterior/Exterior';
 import Interior from '../Pages/Interior/Interior';
 import Login from '../Pages/Login/Login';
+import Register from '../Pages/Register/Register'
 import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" component={Exterior}/>
         <Route exact path="/interior" component={Interior}/>
         <Route exact path="/login" component={Login}/>
+        <Route exact path="/register" component={Register}/>
       </Router>
     <div className="bottom-page">
       <Footer />
