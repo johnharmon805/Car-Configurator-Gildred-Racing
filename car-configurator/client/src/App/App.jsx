@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/" component={Exterior}/>
         <Route exact path="/interior" component={Interior}/>
         <Route exact path="/login" component={Login}/>
-        <Route exact path="/register" component={Register}/>
+        <Route exact path="/signup" component={Register}/>
       </Router>
     <div className="bottom-page">
       <Footer />

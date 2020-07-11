@@ -16,9 +16,14 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.21",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7"
   },
   "devDependencies": {

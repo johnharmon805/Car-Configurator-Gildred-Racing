@@ -3,7 +3,7 @@ import React from "react";
 function Navbar(){
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <img id="logo" src="/Assets/GR logo.png"></img>
+        <img id="logo" src="/Assets/grlogo.png"></img>
         <button
           className="navbar-toggler"
           type="button"
