@@ -9,18 +9,18 @@ class Login extends React.Component {
 			  <div className="fadeIn first card-header">
 				<div className="row">
 					<div className="col-6"><a href="/login">Login</a></div>
-					<div className="col-6"><a href="/register">Register</a></div>
+					<div className="col-6"><a href="/signup">Register</a></div>
 				</div>
 			  </div>
 		  
 			  <form>
-				<input type="text" id="login" class="fadeIn second" name="login" placeholder="username"/>
-				<input type="text" id="password" class="fadeIn third" name="login" placeholder="password"/>
-				<input type="submit" class="fadeIn fourth" value="Log In"/>
+				<input type="text" id="login" className="fadeIn second" name="login" placeholder="email"/>
+				<input type="text" id="password" className="fadeIn third" name="password" placeholder="password"/>
+				<input type="submit" className="fadeIn fourth" value="Log In"/>
 			  </form>
 		  
 			  <div id="formFooter">
-				<a class="underlineHover" href="#">Forgot Password?</a>
+				<a className="underlineHover" href="#">Forgot Password?</a>
 			  </div>
 		  
 			</div>

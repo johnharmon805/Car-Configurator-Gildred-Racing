@@ -1,23 +1,47 @@
 import React from 'react';
 import './Register.css';
 
-function Register(){
+class Register extends React.Component {
+state={
+	name: "",
+	email: "",
+	password: ""
+}
+handleChange = (event) => {
+	const {name, value} = event.target;
+	this.setState({
+		[name]: value
+	})
+}
+handleSubmit = (event) => {
+	// alert(JSON.stringify(this.state));
+	event.preventDefault()
+	fetch("/signup", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(this.state)
+		// body: this.state
+	}).then((res) => {
+		console.log(res)
+		alert(`User logged ${this.state.name} in`);
+	});
+}
+render() {
 return(
-    <div class="wrapper fadeInDown">
+    <div className="wrapper fadeInDown">
 			<div id="formContent">		  
 			  <div className="fadeIn first card-header">
 				<div className="row">
 					<div className="col-6"><a href="/login">Login</a></div>
-					<div className="col-6"><a href="/register">Register</a></div>
+					<div className="col-6"><a href="/signup">Register</a></div>
 				</div>
 			  </div>
 		  
 			  <form>
-			  	<input type="text" id="name" class="fadeIn second" name="login" placeholder="name"/>
-			  	<input type="text" id="email" class="fadeIn third" name="login" placeholder="email"/>
-				<input type="text" id="username" class="fadeIn fourth" name="login" placeholder="new username"/>
-				<input type="text" id="password" class="fadeIn fifth" name="login" placeholder="password"/>
-				<input type="submit" class="fadeIn fourth" value="Sign Up"/>
+			  	<input type="text" id="name" className="fadeIn second" name="name" placeholder="name" onChange={this.handleChange}/>
+			  	<input type="text" id="email" className="fadeIn third" name="email" placeholder="email" onChange={this.handleChange}/>
+				<input type="text" id="password" className="fadeIn fifth" name="password" placeholder="password" onChange={this.handleChange}/>
+				<input type="submit" onClick={this.handleSubmit} className="fadeIn fourth" value="Sign Up"/>
 			  </form>
 		  
 			  <div id="formFooter">
@@ -25,7 +49,7 @@ return(
 		  
 			</div>
 	</div>
-)
+)}
 }
 
 export default Register;
