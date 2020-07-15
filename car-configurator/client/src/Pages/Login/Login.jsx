@@ -1,10 +1,38 @@
 import React from 'react';
 import './Login.css';
+import API from '../../Utils/API'
 
 class Login extends React.Component {
+	state= {
+		email: '',
+		password: '',
+		redirect: false,
+		loggedIn: false
+	}
+	handleFormSubmit = (event) => {
+		event.preventDefault()
+		if (this.state.email && this.state.password) {
+		API.userLogin({email: this.state.email, password: this.state.password})
+		.then(()=>{
+			this.setState({
+				redirect: true,
+				loggedIn: true
+			})
+			window.location.href = '/profile';
+		}
+		)
+		.catch(err => console.log(err))
+	}
+	}
+	handleChange = (event) => {
+		const {name, value} = event.target;
+		this.setState({
+			[name]: value
+		})
+	}
     render() {
         return(
-			<div class="wrapper fadeInDown">
+			<div className="wrapper fadeInDown">
 			<div id="formContent">		  
 			  <div className="fadeIn first card-header">
 				<div className="row">
@@ -14,9 +42,9 @@ class Login extends React.Component {
 			  </div>
 		  
 			  <form>
-				<input type="text" id="login" className="fadeIn second" name="login" placeholder="email"/>
-				<input type="text" id="password" className="fadeIn third" name="password" placeholder="password"/>
-				<input type="submit" className="fadeIn fourth" value="Log In"/>
+				<input type="text" id="login" className="fadeIn second" name="email" placeholder="email" onChange={this.handleChange}/>
+				<input type="text" id="password" className="fadeIn third" name="password" placeholder="password" onChange={this.handleChange}/>
+				<input type="submit" className="fadeIn fourth" value="Log In" onClick={this.handleFormSubmit}/>
 			  </form>
 		  
 			  <div id="formFooter">
