@@ -12,8 +12,8 @@ class Interior extends React.Component {
           <ReactPlayer
             className='react-player fixed-bottom'
             url= 'https://www.youtube.com/watch?v=LyjUDRnlWbM?autoplay=1'
-            width='75%'
-            height='75%'
+            width='1000px'
+            height='600px'
             loop={true}
             playing={true}
             controls={false}
@@ -21,16 +21,6 @@ class Interior extends React.Component {
     
           />
         </div>
-                {/* <video
-                  id="faceVideo"
-                  width="1000px"
-                  height="640px"
-                  autoplay
-                  loop
-                  muted
-                >
-                  <source src="https://www.youtube.com/watch?v=LyjUDRnlWbM" type="video/mp4" />
-                </video> */}
                 <div class="overlay">
                   <img
                     id="interiorImg"
