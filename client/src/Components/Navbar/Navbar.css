@@ -10,3 +10,7 @@
     margin-right: 50px;
 }
 
+nav {
+    z-index: 100;
+}
+
