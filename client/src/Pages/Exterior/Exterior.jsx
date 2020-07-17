@@ -46,7 +46,7 @@ class Exterior extends React.Component {
         return(
         <div>
 
-
+        {/* Yeah, the ternary statement is horrible. We're aware. Are we going to change it? Nope :) */}
     <div className="row">
         <div className="col-md-8">
             <div className="col">
