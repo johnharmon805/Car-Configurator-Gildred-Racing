@@ -2,7 +2,6 @@
 import React from 'react';
 import './Exterior.css';
 
-
 class Exterior extends React.Component {
     constructor(props) {
         super(props) 

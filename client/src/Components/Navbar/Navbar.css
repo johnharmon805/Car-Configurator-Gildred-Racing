@@ -1,0 +1,12 @@
+#navbarbtn {
+   margin: auto;
+   margin-left: 20px;
+    
+}
+
+.navbar-nav {
+    justify-content: center;
+    margin: auto;
+    margin-right: 50px;
+}
+

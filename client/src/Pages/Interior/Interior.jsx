@@ -1,5 +1,6 @@
 import React from 'react';
-import "./Interior.css"
+import "./Interior.css";
+import ReactPlayer from 'react-player';
 
 class Interior extends React.Component {
     render() {
@@ -7,7 +8,20 @@ class Interior extends React.Component {
           <>
             <div class="container" id="vid-overlay">
               <div class="vidContainer">
-                <video
+              <div className='player-wrapper'>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            url= 'https://www.youtube.com/watch?v=LyjUDRnlWbM?autoplay=1'
+            width='75%'
+            height='75%'
+            loop={true}
+            playing={true}
+            controls={false}
+          
+    
+          />
+        </div>
+                {/* <video
                   id="faceVideo"
                   width="1000px"
                   height="640px"
@@ -15,13 +29,13 @@ class Interior extends React.Component {
                   loop
                   muted
                 >
-                  <source src="interior-vid.mp4" type="video/mp4" />
-                </video>
+                  <source src="https://www.youtube.com/watch?v=LyjUDRnlWbM" type="video/mp4" />
+                </video> */}
                 <div class="overlay">
                   <img
                     id="interiorImg"
                     alt=""
-                    src="inside.png"
+                    src="/Assets/inside.png"
                   />
                 </div>
               </div>
