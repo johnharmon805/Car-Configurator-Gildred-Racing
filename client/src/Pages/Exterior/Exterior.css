@@ -22,7 +22,7 @@
     height: 50px;
     width: 200px;
 }
-/* Button colors here: */
+/* Button colors here:
 #red-btn, #white-btn, #lightblue-btn, #skyblue-btn, #blue-btn {
     height: 70px;
     padding-top: 5px;
@@ -36,7 +36,7 @@
 .color-btns:focus {
     box-shadow: 0 0 5px blue;
     outline: none;
-}
+} */
 .rim-btn {
     background-color: transparent;
     border: none;
@@ -58,20 +58,7 @@
     box-shadow: 0 0 5px blue;
     outline: none;
 }
-#car {
-    height: 300px;
-    width: 600px;
-    position: relative;
-    z-index: 10;
-}
-#carBody {
-    height: 180px;
-    width: 520px;
-    position: relative;
-    bottom: 230px;
-    left: 0px;
-    z-index: 0
-}
+
 #rim2img {
     height: 80px;
 }
@@ -105,8 +92,62 @@
     font-family: Arial;
     font-weight: 900;
 }
-
 #wheeloptions {
     margin-top: 10px;
     margin-left: 20px;
+}
+#rim6img {
+    height: 100px;
+}
+.rim-btn6:focus {
+    box-shadow: 0 0 5px blue;
+    outline: none;
+}
+.rim-btn6 {
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+}
+#car {
+    height: 298px;
+    width: 610px;
+    position: relative;
+    z-index: 10;
+    left: 0px;
+}
+#carBody {
+    height: 176px;
+    width: 524px;
+    position: relative;
+    bottom: 230px;
+    left: 2px;
+    z-index: 0
+}
+#rim-layer {
+    position: relative;
+    left: 1px;
+    bottom: 478px;
+    height: 300px;
+    width: 610px;
+    z-index: 20;
+}
+
+@media only screen and (min-width: 1757px) {
+    #carBody {
+        height: 176px;
+        width: 524px;
+        position: relative;
+        bottom: 230px;
+        left: 0px;
+        z-index: 0
+    }
+    #rim-layer {
+        position: relative;
+        right: 260px;
+        bottom: 480px;
+        height: 300px;
+        width: 610px;
+        z-index: 20;
+    }
 }
