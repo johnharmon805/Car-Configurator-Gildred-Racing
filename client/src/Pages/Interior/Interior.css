@@ -1,6 +1,4 @@
 .overlay{
-    height: "1000px"; 
-    width: "1500px";
     margin-top: 75px;
     top: -60px;
     left: 15px;
@@ -10,11 +8,7 @@
 .container{
     position: relative;;
 }
-/* .vidContainer faceVideo{
-    position: absolute;
-    z-index: 0;
-    margin-top: 25px;
-} */
+
 #faceVideo {
     margin-bottom: 20px;
 }
@@ -27,14 +21,15 @@
     width: 1000px;
     height: 600px;
     justify-content: center;
-    margin-left: 135px;
+    margin-left: 54px;
 }
 
 .react-player {
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     z-index: 0;
     margin-top: 100px;
-    margin-left: 150px;
-
-    
+    margin-left: 54px;
+    justify-content: center;
+    position: relative;
+    bottom: 85px
 }
