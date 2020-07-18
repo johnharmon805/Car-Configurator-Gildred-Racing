@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import './Exterior.css';
+import { SwatchesPicker } from 'react-color';
 
 class Exterior extends React.Component {
     constructor(props) {
@@ -17,9 +18,13 @@ class Exterior extends React.Component {
             rimTwo: false,
             rimThree: false,
             rimFour: false,
-            rimFive: false
+            rimFive: false,
+            background: "fff"
         }
     }
+    handleChangeComplete = (color) => {
+        this.setState({ background: color.hex });
+      };
     handleSubmit = (buttonState)=>{
         this.setState({
             isRed: false,
@@ -41,8 +46,10 @@ class Exterior extends React.Component {
             rimFive: false,
             [buttonState]:true
         })
+        console.log(this.state.background)
     }
     render() {
+        let customColor = this.state.background
         return(
         <div>
 
@@ -87,6 +94,9 @@ class Exterior extends React.Component {
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isSkyBlue")}><img id="skyblue-btn" src="/Assets/skyblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isLightBlue")}><img id="lightblue-btn" src="/Assets/lightblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isWhite")}><img id="white-btn" src="/Assets/white-btn.png"></img></button></div>
+                    <SwatchesPicker 
+                        onChange={ this.handleChangeComplete }
+                    />
             </div>
             {/* <div className="row">
                 <div className="col"><button id="yellow" onClick={()=>this.handleSubmit("isYellow")}></button></div>
@@ -102,6 +112,7 @@ class Exterior extends React.Component {
             </div>
         </div>
     </div>
+    <img src="/Assets/maskinglayertest.png" height="200px" id="testing" style={{backgroundColor: `${customColor}`}}/>
 
         </div>
             ) 
