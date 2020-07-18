@@ -31,14 +31,14 @@ class Exterior extends React.Component {
         })
     }
     render() {
-        let customColor = this.state.background
+        let customColor = {backgroundColor: `${this.state.background}`, backdropFilter: 'drop-shadow(8px 8px 10px white)'}
         return(
         <div>
     <div className="row">
         <div className="col-md-8">
             <div className="col">
                     <img src="/Assets/topLayer.png" id="car" height="200" width="500"></img>
-                    <img src="/Assets/maskinglayertest.png" id="carBody" height="200px" style={{backgroundColor: `${customColor}`}}/>
+                    <img src="/Assets/maskinglayertest.png" id="carBody" height="200px" style={customColor}/>
                     {this.state.rimSix ? null : <img id="rim-layer" src={
                         this.state.rimOne ? "/Assets/rim1.png" :
                         this.state.rimTwo ? "/Assets/rim2.png" :
