@@ -19,8 +19,7 @@ class Exterior extends React.Component {
             rimThree: false,
             rimFour: false,
             rimFive: false,
-            background: "fff",
-            colorOptions: false
+            background: "fff"
         }
     }
     handleChangeComplete = (color) => {
@@ -38,11 +37,11 @@ class Exterior extends React.Component {
             [buttonState]:true
         })
     }
-    handleColor = () => {
-        this.setState({
-            colorOptions: true
-        })
-    }
+    // handleColor = () => {
+    //     this.setState({
+    //         colorOptions: true
+    //     })
+    // }
     handleSubmitButton = (buttonState)=>{
         this.setState({
             rimOne: false,
@@ -97,13 +96,13 @@ class Exterior extends React.Component {
         <div className="col-md-4" id="settings">
             <div className="row" id="colorstitle">Exterior Colors</div>
             <div className="row" id="colorselect">
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isRed")}><img id="red-btn" src="/Assets/red-btn.png"></img></button></div>
+                {/* <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isRed")}><img id="red-btn" src="/Assets/red-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isBlue")}><img id="blue-btn" src="/Assets/blue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isSkyBlue")}><img id="skyblue-btn" src="/Assets/skyblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isLightBlue")}><img id="lightblue-btn" src="/Assets/lightblue-btn.png"></img></button></div>
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isWhite")}><img id="white-btn" src="/Assets/white-btn.png"></img></button></div>
-                <div classname="col"><button className="rainbow-btn" onClick={this.handleColor}>Choose your own color</button></div>
-                {this.state.colorOptions ? <SwatchesPicker onChange={ this.handleChangeComplete }/> : <div></div>}
+                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isWhite")}><img id="white-btn" src="/Assets/white-btn.png"></img></button></div> */}
+                {/* <div classname="col"><button className="rainbow-btn" onClick={this.handleColor}>Choose your own color</button></div> */}
+               <SwatchesPicker onChange={ this.handleChangeComplete }/>
             </div>
             {/* <div className="row">
                 <div className="col"><button id="yellow" onClick={()=>this.handleSubmit("isYellow")}></button></div>
