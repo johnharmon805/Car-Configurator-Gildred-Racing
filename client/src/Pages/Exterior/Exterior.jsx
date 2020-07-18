@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import './Exterior.css';
+import { SwatchesPicker } from 'react-color';
 
 class Exterior extends React.Component {
     constructor(props) {
@@ -17,9 +18,14 @@ class Exterior extends React.Component {
             rimTwo: false,
             rimThree: false,
             rimFour: false,
-            rimFive: false
+            rimFive: false,
+            background: "fff",
+            colorOptions: false
         }
     }
+    handleChangeComplete = (color) => {
+        this.setState({ background: color.hex });
+      };
     handleSubmit = (buttonState)=>{
         this.setState({
             isRed: false,
@@ -32,6 +38,11 @@ class Exterior extends React.Component {
             [buttonState]:true
         })
     }
+    handleColor = () => {
+        this.setState({
+            colorOptions: true
+        })
+    }
     handleSubmitButton = (buttonState)=>{
         this.setState({
             rimOne: false,
@@ -41,8 +52,10 @@ class Exterior extends React.Component {
             rimFive: false,
             [buttonState]:true
         })
+        console.log(this.state.background)
     }
     render() {
+        let customColor = this.state.background
         return(
         <div>
 
@@ -50,7 +63,7 @@ class Exterior extends React.Component {
     <div className="row">
         <div className="col-md-8">
             <div className="col">
-                <img id="car" alt="" height="200" width="500" src={
+                {/* <img id="car" alt="" height="200" width="500" src={
                     this.state.isRed && this.state.rimOne ? "/Assets/red.png" : 
                     this.state.isRed && this.state.rimTwo ? "/Assets/red2.png" : 
                     this.state.isRed && this.state.rimThree ? "/Assets/red3.png" :
@@ -76,7 +89,9 @@ class Exterior extends React.Component {
                     this.state.isWhite && this.state.rimThree ? "/Assets/white3.png" :
                     this.state.isWhite && this.state.rimFour ? "/Assets/white4.png" :
                     this.state.isWhite && this.state.rimFive ? "/Assets/white5.png" : null
-                    }></img>
+                    }></img> */}
+                    <img src="/Assets/topLayer.png" id="car" height="200" width="500"></img>
+                    <img src="/Assets/maskinglayertest.png" id="carBody" height="200px" style={{backgroundColor: `${customColor}`}}/>
             </div>
         </div>
         <div className="col-md-4" id="settings">
@@ -87,6 +102,8 @@ class Exterior extends React.Component {
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isSkyBlue")}><img id="skyblue-btn" src="/Assets/skyblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isLightBlue")}><img id="lightblue-btn" src="/Assets/lightblue-btn.png"></img></button></div>
                 <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isWhite")}><img id="white-btn" src="/Assets/white-btn.png"></img></button></div>
+                <div classname="col"><button className="rainbow-btn" onClick={this.handleColor}>Choose your own color</button></div>
+                {this.state.colorOptions ? <SwatchesPicker onChange={ this.handleChangeComplete }/> : <div></div>}
             </div>
             {/* <div className="row">
                 <div className="col"><button id="yellow" onClick={()=>this.handleSubmit("isYellow")}></button></div>
@@ -102,8 +119,7 @@ class Exterior extends React.Component {
             </div>
         </div>
     </div>
-
-        </div>
+</div>
             ) 
     }
 }

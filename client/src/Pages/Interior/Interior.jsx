@@ -10,15 +10,13 @@ class Interior extends React.Component {
               <div class="vidContainer">
               <div className='player-wrapper'>
           <ReactPlayer
-            className='react-player fixed-bottom'
+            className='react-player'
             url= 'https://www.youtube.com/watch?v=LyjUDRnlWbM?autoplay=1'
             width='1000px'
             height='600px'
             loop={true}
             playing={true}
             controls={false}
-          
-    
           />
         </div>
                 <div class="overlay">
@@ -30,6 +28,11 @@ class Interior extends React.Component {
                 </div>
               </div>
             </div>
+             {/* <div id="tvBorder" className="phone">
+        <video controls autoplay height="450" width="1000px" style={{objectFit: "fill"}}>
+            <source src="https://www.youtube.com/watch?v=LyjUDRnlWbM?autoplay=1" type="video/mp4" />
+        </video>
+    </div> */}
           </>
         );
     }
