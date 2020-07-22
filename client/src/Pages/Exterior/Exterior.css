@@ -117,17 +117,17 @@
     left: 0px;
 }
 #carBody {
-    height: 176px;
+    height: 172px;
     width: 524px;
     position: relative;
-    bottom: 230px;
-    left: 2px;
+    bottom: 226.5px;
+    left: 1px;
     z-index: 0
 }
 #rim-layer {
     position: relative;
-    left: 1px;
-    bottom: 478px;
+    left: 0px;
+    bottom: 470px;
     height: 300px;
     width: 610px;
     z-index: 20;
@@ -135,17 +135,17 @@
 
 @media only screen and (min-width: 1757px) {
     #carBody {
-        height: 176px;
+        height: 172px;
         width: 524px;
         position: relative;
-        bottom: 230px;
-        left: 0px;
+        top: 8px;
+        left: -566px;
         z-index: 0
     }
     #rim-layer {
         position: relative;
-        right: 260px;
-        bottom: 480px;
+        left: -262px;
+        bottom: 300px;
         height: 300px;
         width: 610px;
         z-index: 20;
