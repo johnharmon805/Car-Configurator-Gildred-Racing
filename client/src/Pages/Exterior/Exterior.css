@@ -194,3 +194,20 @@
         z-index: 0
     }
 }
+@media only screen and (max-width: 375px) {
+    #opaque {
+        position: relative;
+        left: 43px;
+    }
+    #carBody {
+        height: 172px;
+        width: 524px;
+        position: relative;
+        top: -227px;
+        left: 43px;
+        z-index: 0;
+    }
+    .col-md-8 {
+        border: none;
+    }
+}

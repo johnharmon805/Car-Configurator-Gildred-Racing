@@ -39,7 +39,7 @@ class Exterior extends React.Component {
             <div className="col">
                     <img src="/Assets/topLayer.png" id="car" height="200" width="500"></img>
                     <img src="/Assets/maskinglayertest.png" id="carBody" height="200px" style={customColor}/>
-                    <img src="/Assets/opacity-layer.png" id="opaque" height="200px"></img>
+                    <img src="/Assets/opacity-layer.png" id="opaque" height="200px"/>
                     {this.state.rimSix ? null : <img id="rim-layer" src={
                         this.state.rimOne ? "/Assets/rim1.png" :
                         this.state.rimTwo ? "/Assets/rim2.png" :

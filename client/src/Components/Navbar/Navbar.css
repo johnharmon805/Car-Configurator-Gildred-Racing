@@ -3,11 +3,16 @@
    margin-left: 20px;
     
 }
+.navbar-collapse {
+    white-space: nowrap;
+    width:2000px;
+}
 
 .navbar-nav {
     justify-content: center;
     margin: auto;
     margin-right: 50px;
+    align-items: center;
 }
 
 nav {
