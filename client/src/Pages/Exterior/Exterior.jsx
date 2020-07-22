@@ -39,6 +39,7 @@ class Exterior extends React.Component {
             <div className="col">
                     <img src="/Assets/topLayer.png" id="car" height="200" width="500"></img>
                     <img src="/Assets/maskinglayertest.png" id="carBody" height="200px" style={customColor}/>
+                    <img src="/Assets/opacity-layer.png" id="opaque" height="200px"></img>
                     {this.state.rimSix ? null : <img id="rim-layer" src={
                         this.state.rimOne ? "/Assets/rim1.png" :
                         this.state.rimTwo ? "/Assets/rim2.png" :
@@ -51,12 +52,6 @@ class Exterior extends React.Component {
         <div className="col-md-4" id="settings">
             <div className="row" id="colorstitle">Exterior Colors</div>
             <div className="row" id="colorselect">
-                {/* <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isRed")}><img id="red-btn" src="/Assets/red-btn.png"></img></button></div>
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isBlue")}><img id="blue-btn" src="/Assets/blue-btn.png"></img></button></div>
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isSkyBlue")}><img id="skyblue-btn" src="/Assets/skyblue-btn.png"></img></button></div>
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isLightBlue")}><img id="lightblue-btn" src="/Assets/lightblue-btn.png"></img></button></div>
-                <div className="col"><button className="color-btns" onClick={()=>this.handleSubmit("isWhite")}><img id="white-btn" src="/Assets/white-btn.png"></img></button></div> */}
-                {/* <div classname="col"><button className="rainbow-btn" onClick={this.handleColor}>Choose your own color</button></div> */}
                <SwatchesPicker onChange={ this.handleChangeComplete }/>
             </div>
             <div className="row" id="wheeltitle">Tire Rims</div>

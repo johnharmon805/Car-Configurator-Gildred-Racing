@@ -120,34 +120,77 @@
     height: 172px;
     width: 524px;
     position: relative;
-    bottom: 226.5px;
+    bottom: 226.6px;
     left: 1px;
     z-index: 0
 }
 #rim-layer {
     position: relative;
     left: 0px;
-    bottom: 470px;
+    bottom: 642px;
     height: 300px;
     width: 610px;
     z-index: 20;
 }
+#opaque {
+    z-index: 30;
+    position: relative;
+    bottom: 400px;
+    width: 524px;
+    height: 172px;
+}
 
-@media only screen and (min-width: 1757px) {
+@media only screen and (min-width: 1680px) {
     #carBody {
         height: 172px;
         width: 524px;
         position: relative;
-        top: 8px;
-        left: -566px;
+        top: -227px;
+        left: 263px;
         z-index: 0
     }
     #rim-layer {
         position: relative;
-        left: -262px;
-        bottom: 300px;
+        left: 0px;
+        bottom: 470px;
         height: 300px;
         width: 610px;
         z-index: 20;
+    }
+    #opaque {
+        z-index: 30;
+        position: relative;
+        bottom: 225px;
+        right: 263px;
+        width: 524px;
+        height: 172px;
+    }
+}
+@media only screen and (max-width: 1006px) {
+    #opaque {
+        position: relative;
+        left: 43px;
+    }
+    #carBody {
+        height: 172px;
+        width: 524px;
+        position: relative;
+        top: -227px;
+        left: 43px;
+        z-index: 0
+    }
+}
+@media only screen and (max-width: 768px) {
+    #opaque {
+        position: relative;
+        left: 1px;
+    }
+    #carBody {
+        height: 172px;
+        width: 524px;
+        position: relative;
+        top: -227px;
+        left: 1px;
+        z-index: 0
     }
 }
