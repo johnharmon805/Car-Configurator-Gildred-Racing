@@ -1,13 +1,8 @@
 #navbarbtn {
    margin: auto;
    margin-left: 20px;
-    
+   padding-right: 40px;
 }
-.navbar-collapse {
-    white-space: nowrap;
-    width:2000px;
-}
-
 .navbar-nav {
     justify-content: center;
     margin: auto;
@@ -17,5 +12,6 @@
 
 nav {
     z-index: 100;
+    width: 105%;
 }
 
