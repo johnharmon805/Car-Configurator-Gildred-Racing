@@ -60,7 +60,7 @@ class Exterior extends React.Component {
                 <div className="col"><button className="rim-btn" id="rimTwo" onClick={()=>this.handleSubmitButton("rimTwo")}><img id="rim2img" src="/Assets/rim-2.png"></img></button></div>
                 <div className="col"><button className="rim-btn" id="rimTwo" onClick={()=>this.handleSubmitButton("rimThree")}><img id="rim3img" src="/Assets/rim-3.png"></img></button></div>
             </div>
-            <div className="row">   
+            <div className="row" id="wheeloptions2">   
                 <div className="col"><button className="rim-btn" id="rimTwo" onClick={()=>this.handleSubmitButton("rimFour")}><img id="rim4img" src="/Assets/rim-4.png"></img></button></div>
                 <div className="col"><button className="rim-btn" id="rimTwo" onClick={()=>this.handleSubmitButton("rimFive")}><img id="rim2img" src="/Assets/rim-5.png"></img></button></div>
                 <div className="col"><button className="rim-btn6" id="rimTwo" onClick={()=>this.handleSubmitButton("rimSix")}><img id="rim6img" src="/Assets/rim-6.png"></img></button></div>
