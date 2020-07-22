@@ -94,7 +94,10 @@
 }
 #wheeloptions {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 0px;
+}
+#wheeloptions2 {
+    margin-left: 0px
 }
 #rim6img {
     height: 100px;
@@ -166,17 +169,17 @@
         height: 172px;
     }
 }
-@media only screen and (max-width: 1006px) {
+@media only screen and (max-width: 1024px) {
     #opaque {
         position: relative;
-        left: 43px;
+        left: 0px;
     }
     #carBody {
         height: 172px;
         width: 524px;
         position: relative;
         top: -227px;
-        left: 43px;
+        left: 0px;
         z-index: 0
     }
 }
@@ -193,21 +196,50 @@
         left: 1px;
         z-index: 0
     }
+    .col-md-8 {
+        border: none;
+    }
 }
 @media only screen and (max-width: 375px) {
+    #car {
+        height: 149px;
+        width: 305px;
+        position: relative;
+        z-index: 10;
+        left: 0px;
+    }
     #opaque {
         position: relative;
-        left: 43px;
+        left: 0px;
+        width: 262px;
+        height: 86px;
+        bottom: 199px;
     }
     #carBody {
-        height: 172px;
-        width: 524px;
+        height: 86px;
+        width: 262px;
         position: relative;
-        top: -227px;
-        left: 43px;
+        top: -113px;
+        left: 1px;
         z-index: 0;
+    }
+    #rim-layer {
+        position: relative;
+        left: 0px;
+        bottom: 320px;
+        height: 150px;
+        width: 305px;
+        z-index: 20;
     }
     .col-md-8 {
         border: none;
+    }
+    #colorselect, #colorstitle, #wheeltitle {
+        position: relative;
+        bottom: 300px;
+    }
+    #wheeloptions, #wheeloptions2 {
+        position: relative;
+        bottom: 300px;
     }
 }
