@@ -120,17 +120,24 @@
     height: 172px;
     width: 524px;
     position: relative;
-    bottom: 226.5px;
+    bottom: 226.6px;
     left: 1px;
     z-index: 0
 }
 #rim-layer {
     position: relative;
     left: 0px;
-    bottom: 470px;
+    bottom: 642px;
     height: 300px;
     width: 610px;
     z-index: 20;
+}
+#opaque {
+    z-index: 30;
+    position: relative;
+    bottom: 400px;
+    width: 524px;
+    height: 172px;
 }
 
 @media only screen and (min-width: 1757px) {

@@ -61,12 +61,12 @@ class Interior extends React.Component {
             </div>
           </div>
           <div className="row">
-              <div className="col"><button className="interior-btn1" onClick={()=>this.handleSubmitButton("interiorOne")}>Interior 1</button></div>
-              <div className="col"><button className="interior-btn" onClick={()=>this.handleSubmitButton("interiorTwo")}>Interior 2</button></div>
-              <div className="col"><button className="interior-btn" onClick={()=>this.handleSubmitButton("interiorThree")}>Interior 3</button></div>
-              <div className="col"><button className="interior-btn" onClick={()=>this.handleSubmitButton("interiorFour")}>Interior 4</button></div>
-              <div className="col"><button className="interior-btn" onClick={()=>this.handleSubmitButton("interiorFive")}>Interior 5</button></div>
-              <div className="col"><button className="interior-btn" onClick={()=>this.handleSubmitButton("interiorSix")}>Interior 6</button></div>
+              <div className="col"><button className="interior-btn1 button fire" onClick={()=>this.handleSubmitButton("interiorOne")}>Interior 1</button></div>
+              <div className="col"><button className="interior-btn button fire" onClick={()=>this.handleSubmitButton("interiorTwo")}>Interior 2</button></div>
+              <div className="col"><button className="interior-btn button fire" onClick={()=>this.handleSubmitButton("interiorThree")}>Interior 3</button></div>
+              <div className="col"><button className="interior-btn button fire" onClick={()=>this.handleSubmitButton("interiorFour")}>Interior 4</button></div>
+              <div className="col"><button className="interior-btn button fire" onClick={()=>this.handleSubmitButton("interiorFive")}>Interior 5</button></div>
+              <div className="col"><button className="interior-btn button fire" onClick={()=>this.handleSubmitButton("interiorSix")}>Interior 6</button></div>
           </div>
         </>
         );
