@@ -16,8 +16,12 @@ if (process.env.NODE_ENV === "production") {
 
 var configDB = require('./config/database.js');
 
+
+
 // configuration ===============================================================
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gildredUsers")
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gildredUsers").then(console.log('connected.'));
+
+const db = require('./models/user.js');
 
 require('./config/passport')(passport); // pass passport for configuration
 
@@ -28,7 +32,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // Define API routes here
-require("./routes/apiRoutes")(app, passport)
+require("./routes/apiRoutes")(app, passport, db)
 
 // Send every other request to the React app
 // Define any API routes before this runs

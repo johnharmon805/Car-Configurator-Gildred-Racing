@@ -182,6 +182,14 @@
         left: 0px;
         z-index: 0
     }
+    #colorselect, #colorstitle, #wheeltitle {
+        position: relative;
+        bottom: 660px;
+    }
+    #wheeloptions, #wheeloptions2 {
+        position: relative;
+        bottom: 660px;
+    }
 }
 @media only screen and (max-width: 768px) {
     #opaque {

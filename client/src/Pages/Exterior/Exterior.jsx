@@ -35,21 +35,22 @@ class Exterior extends React.Component {
         return(
         <div>
     <div className="row">
-        <div className="col-md-8">
+        <div className="col-lg-8">
             <div className="col">
                     <img src="/Assets/topLayer.png" id="car" height="200" width="500"></img>
                     <img src="/Assets/maskinglayertest.png" id="carBody" height="200px" style={customColor}/>
                     <img src="/Assets/opacity-layer.png" id="opaque" height="200px"/>
-                    {this.state.rimSix ? null : <img id="rim-layer" src={
+                    <img id="rim-layer" src={
                         this.state.rimOne ? "/Assets/rim1.png" :
                         this.state.rimTwo ? "/Assets/rim2.png" :
                         this.state.rimThree ? "/Assets/rim3.png" :
                         this.state.rimFour ? "/Assets/rim4.png" :
-                        this.state.rimFive ? "/Assets/rim5.png" : null
-                    }/>}
+                        this.state.rimFive ? "/Assets/rim5.png" : 
+                        this.state.rimSix ? "/Assets/topLayer.png" : null
+                    }/>
             </div>
         </div>
-        <div className="col-md-4" id="settings">
+        <div className="col-lg-4" id="settings">
             <div className="row" id="colorstitle">Exterior Colors</div>
             <div className="row" id="colorselect">
                <SwatchesPicker onChange={ this.handleChangeComplete }/>

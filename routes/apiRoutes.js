@@ -1,4 +1,6 @@
-module.exports = function(app, passport) {
+// const db = require('../models/user');
+
+module.exports = function(app, passport, db) {
     // app.post('/login')
 
     // app.post('/signup')
@@ -34,11 +36,33 @@ function isLoggedIn(req, res, next) {
     else res.status(401);
 }
 
-app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/profile', // redirect to the secure profile section
-    failureRedirect: '/signup', // redirect back to the signup page if there is an error
-    failureFlash: true // allow flash messages
-}));
+// app.post('/signup', passport.authenticate('local-signup', {
+//     successRedirect: '/profile', // redirect to the secure profile section
+//     failureRedirect: '/signup', // redirect back to the signup page if there is an error
+//     failureFlash: true // allow flash messages
+// }));
+
+app.post('/signup', (req, res) => {
+    console.log(req.body)
+
+    // store in db
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    // console.log(db)
+
+    db.findOneAndUpdate({ local: { email: email } }, {
+        name,
+        email,
+        password
+    }, { upsert: true, new: true }).then((user) => {
+        console.log(user);
+
+        res.send(user._id)
+    });
+});
+
 app.post('/login', function(req, res, next){
     passport.authenticate('local-login', function(err, user, info){
         if (err) return next(err)

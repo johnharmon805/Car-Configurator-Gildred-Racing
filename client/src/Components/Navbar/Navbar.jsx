@@ -3,7 +3,6 @@ import './Navbar.css';
 
 function Navbar(){
     return (
-      <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light" id="nav-bar">
         <img id="logo" src="/Assets/grlogo.png"></img>
         <button
@@ -32,7 +31,6 @@ function Navbar(){
           </ul>
         </div>
       </nav>
-      </div>
     );
 }
 export default Navbar;
