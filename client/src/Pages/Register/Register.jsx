@@ -21,9 +21,13 @@ handleSubmit = (event) => {
 		headers: { "Content-Type": "application/json" },
 		body: JSON.stringify(this.state)
 		// body: this.state
-	}).then((res) => {
+	}).then(res => res.json())
+	.then((res) => {
 		console.log(res)
-		alert(`User logged ${this.state.name} in`);
+		localStorage.setItem('user', res);
+		window.location = '/profile';
+		// alert(`User logged ${this.state.name} in`);
+
 	});
 }
 render() {
