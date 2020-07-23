@@ -33,8 +33,8 @@ class Exterior extends React.Component {
     render() {
         let customColor = {backgroundColor: `${this.state.background}`, backdropFilter: 'drop-shadow(8px 8px 10px white)'}
         return(
-        <div>
-    <div className="row">
+<div>
+    <div className="row outterRow">
         <div className="col-lg-8">
             <div className="col">
                     <img src="/Assets/topLayer.png" id="car" height="200" width="500"></img>
@@ -65,7 +65,13 @@ class Exterior extends React.Component {
                 <div className="col"><button className="rim-btn" id="rimTwo" onClick={()=>this.handleSubmitButton("rimFour")}><img id="rim4img" src="/Assets/rim-4.png"></img></button></div>
                 <div className="col"><button className="rim-btn" id="rimTwo" onClick={()=>this.handleSubmitButton("rimFive")}><img id="rim2img" src="/Assets/rim-5.png"></img></button></div>
                 <div className="col"><button className="rim-btn6" id="rimTwo" onClick={()=>this.handleSubmitButton("rimSix")}><img id="rim6img" src="/Assets/rim-6.png"></img></button></div>
-            </div>
+            </div> 
+        </div>
+    </div>
+    <div className="row nextbutton">
+        <div className="col-6"></div>
+        <div className="col">
+            <a href="/interior"><button id="nextbtn">Next</button></a>
         </div>
     </div>
 </div>

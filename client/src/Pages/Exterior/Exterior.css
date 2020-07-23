@@ -2,6 +2,9 @@
     border-right: solid thin;
     margin-top: 50px;
 }
+.outterRow {
+    margin-bottom: -300px;
+}
 
 .bottom-page {
     background-color: #333333;
@@ -251,3 +254,14 @@
         bottom: 300px;
     }
 }
+
+#nextbtn {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;  
+ } 

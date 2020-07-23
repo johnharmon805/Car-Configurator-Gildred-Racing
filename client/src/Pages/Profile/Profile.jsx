@@ -1,4 +1,5 @@
 import React from 'react';
+import './Profile.css';
 
 class Profile extends React.Component {
     state = {
@@ -19,6 +20,7 @@ class Profile extends React.Component {
         return (
             <div>
                 <h1>Welcome to the Profile Page</h1>
+                <img id="meme" src="/Assets/Meme.jpg" height="400px" width="480px"/>
             </div>
         )
     };
