@@ -13,4 +13,5 @@ This app allows users to create their own "Super Cooper" by choosing their exter
 * React-Color npm package
 * Passport.js (Originally used for users to login, but feature has since been removed)
 * React.js
+* React-Player npm package
 * Custom car designs built by John Harmon on Adobe's Photoshop and Illustrator.
