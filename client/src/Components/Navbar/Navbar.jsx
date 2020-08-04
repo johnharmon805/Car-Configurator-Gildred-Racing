@@ -26,9 +26,6 @@ function Navbar(){
             <li className="nav-item">
               <a className="nav-link" href="/interior">Interior</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/login">Sign In</a>
-            </li>
             <a href="https://www.supercoopers.com/ordering"><button id="navbarbtn">Order Your Super Cooper</button></a>
           </ul>
         </div>
